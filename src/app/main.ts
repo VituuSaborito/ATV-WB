@@ -1,5 +1,9 @@
 import Entrada from "../io/entrada";
 import Empresa from "../modelo/empresa"
+import AlterarCliente from "../negocio/alteraCliente";
+import Alterarcliente from "../negocio/alteraCliente";
+import AlterarProduto from "../negocio/alteraProduto";
+import AlterarServico from "../negocio/alteraServico";
 import CadastroCliente from "../negocio/cadastroCliente";
 import CadastroProduto from "../negocio/cadastroProduto";
 import CadastroServico from "../negocio/cadastroServico";
@@ -72,16 +76,16 @@ while (execucao) {
             deletar33.deletar()
             break;
         case 41:
-            let alterar41 = new AlteraClientes(empresa.getClientes)
+            let alterar41 = new AlterarCliente(empresa.getClientes)
             alterar41.alterar()
             break;
         case 42:
-            let listagem23 = new ListagemServico(empresa.getServicos)
-            listagem23.listar()
+            let alterar42 = new AlterarProduto(empresa.getProdutos)
+            alterar42.alterar()
             break;
         case 43:
-            let listagem23 = new ListagemServico(empresa.getServicos)
-            listagem23.listar()
+            let alterar43 = new AlterarServico(empresa.getServicos)
+            alterar43.alterar()
             break;
         case 0:
             execucao = false

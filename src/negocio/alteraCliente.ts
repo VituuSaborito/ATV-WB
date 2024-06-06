@@ -3,7 +3,7 @@ import Entrada from "../io/entrada";
 import Altera from "./altera";
 import Cliente from "../modelo/cliente";
 
-export default class Alterarcliente extends Altera{
+export default class AlterarCliente extends Altera{
     private clientes: Array<cliente>
     private entrada: Entrada
     constructor(clientes:Array<cliente>){
