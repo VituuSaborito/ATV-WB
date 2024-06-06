@@ -3,6 +3,9 @@ import Empresa from "../modelo/empresa"
 import CadastroCliente from "../negocio/cadastroCliente";
 import CadastroProduto from "../negocio/cadastroProduto";
 import CadastroServico from "../negocio/cadastroServico";
+import DeletarCliente from "../negocio/deletaCliente";
+import DeletarProduto from "../negocio/deletaProduto";
+import DeletarServico from "../negocio/deletaServico";
 import ListagemClientes from "../negocio/listagemClientes";
 import ListagemProduto from "../negocio/listagemProdutos";
 import ListagemServico from "../negocio/listagemServicos";
@@ -19,6 +22,12 @@ while (execucao) {
     console.log(`21 - Listar todos os clientes`);
     console.log(`22 - Listar todos os produtos`);
     console.log(`23 - Listar todos os serviços`);
+    console.log(`31 - Deletar um cliente`);
+    console.log(`32 - Deletar um produto`);
+    console.log(`33 - Deletar um código`);
+    console.log(`41 - Alterar um cliente`);
+    console.log(`42 - Alterar um produto`);
+    console.log(`43 - Alterar um código`);
     console.log(`0 - Sair`);
     console.log('\n');
 
@@ -47,6 +56,30 @@ while (execucao) {
             listagem22.listar()
             break;
         case 23:
+            let listagem23 = new ListagemServico(empresa.getServicos)
+            listagem23.listar()
+            break;
+        case 31:
+            let deletar31 = new DeletarCliente(empresa.getClientes)
+            deletar31.deletar()
+            break;
+        case 32:
+            let deletar32 = new DeletarProduto(empresa.getProdutos)
+            deletar32.deletar()
+            break;
+        case 33:
+            let deletar33 = new DeletarServico(empresa.getServicos)
+            deletar33.deletar()
+            break;
+        case 41:
+            let alterar41 = new AlteraClientes(empresa.getClientes)
+            alterar41.alterar()
+            break;
+        case 42:
+            let listagem23 = new ListagemServico(empresa.getServicos)
+            listagem23.listar()
+            break;
+        case 43:
             let listagem23 = new ListagemServico(empresa.getServicos)
             listagem23.listar()
             break;

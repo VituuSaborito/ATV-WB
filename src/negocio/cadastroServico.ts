@@ -15,7 +15,8 @@ export default class CadastroServico extends Cadastro{
         let tipo = this.entrada.receberTexto('Por favor informe o tipo do serviço')
         let tempo = this.entrada.receberTexto('Por favor informe o tempo do serviço, no padrão hh:mm')
         let preco = this.entrada.receberNumero('Por favor informe o valor do servico')
-        let servico = new Servico(tipo,tempo,preco);
+        let codigo = this.entrada.receberNumero('Por favor informe o código do serviço')
+        let servico = new Servico(codigo,tipo,tempo,preco);
         this.servico.push(servico)
         console.log(`\nCadastro concluído :)\n`);
     }
