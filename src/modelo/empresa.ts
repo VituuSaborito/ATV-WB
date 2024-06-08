@@ -11,6 +11,19 @@ export default class Empresa{
         this.produtos = []
         this.servicos = []
     }
+
+    public set setClientes(clientes: Array<Cliente>){
+        this.clientes = clientes
+    } 
+
+    public set setProdutos(produtos: Array<Produto>){
+        this.produtos = produtos
+    } 
+
+    public set setServicos(servicos: Array<Servico>){
+        this.servicos = servicos
+    } 
+
     public get getClientes(){
         return this.clientes
     }
