@@ -11,7 +11,7 @@ export default class DeletarServico extends Deleta{
         this.entrada = new Entrada()
     }
     public deletar(): void {
-        let numCodSer = this.entrada.receberNumero('Por favor informe o código do serviço que deseja remover')
+        let numCodSer = this.entrada.receberNumero('Por favor informe o código do serviço que deseja remover: ')
         this.servicos.forEach((servico,c)=>{
             if (servico.codigo == numCodSer){
                 this.servicos.splice(c,1)

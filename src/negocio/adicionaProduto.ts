@@ -21,14 +21,14 @@ export default class AdicionaProduto extends Adiciona {
         let achouProduto = true;
 
         while (achouCliente) {
-            let cpfCli = this.entrada.receberTexto(`\nPor favor informe o cpf do cliente que gostaria de adicionar um produto: `);
+            let cpfCli = this.entrada.receberTexto(`Por favor informe o cpf do cliente que gostaria de adicionar um produto: `);
             this.cliente.forEach(cliente => {
                 if (cliente.getCpf.getValor == cpfCli) {
                     achouCliente = false;
                     while (achouProduto) {
                         let listagem22 = new ListagemProduto(this.produto);
                         listagem22.listar();
-                        let codProd = this.entrada.receberNumero('\nPor favor informe o código do produto que deseja adicionar: ');
+                        let codProd = this.entrada.receberNumero('Por favor informe o código do produto que deseja adicionar: ');
                         this.produto.forEach(produto => {
                             if (produto.codigo == codProd) {
                                 cliente.getProdutosConsumidos.push(produto);

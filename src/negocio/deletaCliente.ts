@@ -11,7 +11,7 @@ export default class DeletarCliente extends Deleta{
         this.entrada = new Entrada()
     }
     public deletar(): void {
-        let numCpfDel = this.entrada.receberTexto(`Por favor informe o cpf do cliente que deseja remover`)
+        let numCpfDel = this.entrada.receberTexto(`Por favor informe o cpf do cliente que deseja remover: `)
         this.clientes.forEach((Cliente ,c ) => {
             if (Cliente.getCpf.getValor == numCpfDel){
                 this.clientes.splice(c,1)

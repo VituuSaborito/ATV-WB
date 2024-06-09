@@ -20,7 +20,7 @@ export default class AlterarCliente extends Altera{
                 
                 let nomeSocial = this.entrada.receberTexto(`Por favor informe o nome social do cliente: `)
                 
-                let genero = this.entrada.receberTexto('Por favor informe o genero do cliente, no padrão homem: H, mulher: M, outro: O')
+                let genero = this.entrada.receberTexto('Por favor informe o genero do cliente, no padrão homem: H, mulher: M, outro: O. :')
 
                 this.clientes.splice(c,1, new Cliente(nome, genero, nomeSocial, cliente.getCpf))
             }

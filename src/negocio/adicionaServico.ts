@@ -21,14 +21,14 @@ export default class AdicionaServico extends Adiciona {
         let achouServico = true;
 
         while (achouCliente) {
-            let cpfCli = this.entrada.receberTexto(`\nPor favor informe o cpf do cliente que gostaria de adicionar um servico: `);
+            let cpfCli = this.entrada.receberTexto(`Por favor informe o cpf do cliente que gostaria de adicionar um servico: `);
             this.cliente.forEach(cliente => {
                 if (cliente.getCpf.getValor == cpfCli) {
                     achouCliente = false;
                     while (achouServico) {
                         let listagem22 = new ListagemServico(this.servico);
                         listagem22.listar();
-                        let codProd = this.entrada.receberNumero('\nPor favor informe o código do servico que deseja adicionar: ');
+                        let codProd = this.entrada.receberNumero('Por favor informe o código do servico que deseja adicionar: ');
                         this.servico.forEach(servico => {
                             if (servico.codigo == codProd) {
                                 cliente.getServicosConsumidos.push(servico);

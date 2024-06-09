@@ -11,11 +11,11 @@ export default class CadastroServico extends Cadastro{
         this.servico = servico
     }
     public cadastrar(): void {
-        console.log(`\nInício do cadastro do cliente`);
-        let tipo = this.entrada.receberTexto('Por favor informe o tipo do serviço')
-        let tempo = this.entrada.receberTexto('Por favor informe o tempo do serviço, no padrão hh:mm')
-        let preco = this.entrada.receberNumero('Por favor informe o valor do servico')
-        let codigo = this.entrada.receberNumero('Por favor informe o código do serviço')
+        console.log(`\nInício do cadastro do cliente: `);
+        let tipo = this.entrada.receberTexto('Por favor informe o tipo do serviço: ')
+        let tempo = this.entrada.receberTexto('Por favor informe o tempo do serviço, no padrão hh:mm.: ')
+        let preco = this.entrada.receberNumero('Por favor informe o valor do servico: ')
+        let codigo = this.entrada.receberNumero('Por favor informe o código do serviço: ')
         let servico = new Servico(codigo,tipo,tempo,preco);
         this.servico.push(servico)
         console.log(`\nCadastro concluído :)\n`);

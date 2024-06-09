@@ -17,11 +17,14 @@ import DeletarCliente from "../negocio/deletaCliente";
 import DeletarProduto from "../negocio/deletaProduto";
 import DeletarServico from "../negocio/deletaServico";
 import ListagemClientes from "../negocio/listagemClientes";
+import ListagemMaisConsumidosPorGenero from "../negocio/listagemConsumoPorGenero";
+import ListagemMaisConsumidos from "../negocio/listagemMaisConsumidos";
 import ListagemPorGenero from "../negocio/listagemPorGenero";
 import ListagemProduto from "../negocio/listagemProdutos";
 import ListagemServico from "../negocio/listagemServicos";
 import ListagemTop10Consumidores from "../negocio/listagemTop10Consumidores";
 import ListagemTop10MenosConsumiram from "../negocio/listagemTop10MenosConsumiram";
+import ListagemTop5PorValor from "../negocio/listagemTop5PorValor";
 
 console.log(`Bem-vindo ao cadastro de clientes do Grupo World Beauty`)
 let empresa = new Empresa()
@@ -42,7 +45,7 @@ empresa.setClientes = [
 
 
 
-empresa.setProdutos = [new Produto(1,`produto1`,20)]
+empresa.setProdutos = [new Produto(1,`produto1`,20), new Produto(2,`produto2`,50)]  
 empresa.setServicos = [new Servico(1,`barba`,`1:30`,40)]
 
 
@@ -102,10 +105,12 @@ while (execucao) {
             console.log(`1 - Listar por genero`)
             console.log(`2 - Lista dos 10 maiores consumidores por quantidade`)
             console.log(`3 - Lista dos 10 menos consumiram por quantidade`)
+            console.log(`4 - Lista dos 5 maioores consumidores por valor`)
+            console.log(`5 - Lista dos mais consumidos`)
             
+            console.log(``)
             
-            
-            let opcao1 = entrada.receberNumero(`\nPor favor, escolha uma opção: `)
+            let opcao1 = entrada.receberNumero(`Por favor, escolha uma opção: `)
             switch(opcao1){
                 case 1:
                     let ListagemGenero = new ListagemPorGenero(empresa.getClientes)
@@ -118,6 +123,18 @@ while (execucao) {
                 case 3:
                     let ListagemTopMenos10Con = new ListagemTop10MenosConsumiram(empresa.getClientes)
                     ListagemTopMenos10Con.listar()
+                    break
+                case 4:
+                    let LitstagemTop5Valor = new ListagemTop5PorValor(empresa.getClientes)
+                    LitstagemTop5Valor.listar()
+                    break
+                case 5: 
+                    let ListagemTopVendas = new ListagemMaisConsumidos(empresa.getClientes)
+                    ListagemTopVendas.listar()
+                    break
+                case 6:
+                    let ListagemConsumoGenero = new ListagemMaisConsumidosPorGenero(empresa.getClientes)
+                    ListagemConsumoGenero.listar()
             }
             
             break;

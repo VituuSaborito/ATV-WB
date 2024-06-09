@@ -11,7 +11,7 @@ export default class AlterarProduto extends Altera{
         this.produtos = produto 
     }
     public alterar(): void {
-        let numCodProd = this.entrada.receberNumero(`Por favor informe o código do produto que deseja alterar`)
+        let numCodProd = this.entrada.receberNumero(`Por favor informe o código do produto que deseja alterar: `)
         this.produtos.forEach((produto ,c ) => {
             if (produto.codigo == numCodProd){
                 

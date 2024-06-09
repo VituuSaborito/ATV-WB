@@ -11,7 +11,7 @@ export default class AlterarServico extends Altera{
         this.servicos = servico 
     }
     public alterar(): void {
-        let numCodServ = this.entrada.receberNumero(`Por favor informe o código do servico que deseja alterar`)
+        let numCodServ = this.entrada.receberNumero(`Por favor informe o código do servico que deseja alterar: `)
         this.servicos.forEach((servico ,c ) => {
             if (servico.codigo == numCodServ){
                 

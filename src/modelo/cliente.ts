@@ -1,3 +1,4 @@
+import { totalmem } from "os"
 import CPF from "./cpf"
 import Produto from "./produto"
 import RG from "./rg"
@@ -43,4 +44,21 @@ export default class Cliente {
     public get getServicosConsumidos(): Array<Servico> {
         return this.servicosConsumidos
     }
+
+    public somaValorProd(){
+        let total = 0
+        this.produtosConsumidos.forEach(v => {
+           total += v.preco            
+        });
+        return total
+    }
+
+    public somaValorServ(){
+        let total = 0
+        this.servicosConsumidos.forEach(v => {
+           total += v.preco            
+        });
+        return total
+    }
+
 }
