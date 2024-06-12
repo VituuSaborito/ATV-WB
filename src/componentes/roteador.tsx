@@ -9,9 +9,14 @@ import FormularioCadastroProduto from "./formularioCadastroProduto";
 import FormularioDeletaProduto from "./formularioDeletaProduto";
 import ListaProduto from "./listaProduto";
 import FormularioDeletaServico from "./formularioDeletaServico";
-import FormularioCadastroServico from "./formularioAlteracaoServico";
+import FormularioCadastroServico from "./formularioCadastroServico";
 import FormularioAlteracaoServico from "./formularioAlteracaoServico";
 import ListaServico from "./listaServico";
+import AdicionarProduto from "./adicionarProduto";
+import AdicionarServico from "./adicionarServico";
+import ListaPorGenero from "./listaPorGenero";
+
+
 
 
 type state = {
@@ -36,7 +41,7 @@ export default class Roteador extends Component<{}, state> {
     }
 
     render() {
-        let barraNavegacao = <BarraNavegacao seletorView={this.selecionarView} tema="purple lighten-4" botoes={['Clientes', 'Produtos','Serviços']} />
+        let barraNavegacao = <BarraNavegacao seletorView={this.selecionarView} tema="purple lighten-4" botoes={['Clientes', 'Produtos','Serviços','Adicionar Produto ou Serviço','Listagens Especificas']} />
         if (this.state.tela === 'Clientes') {
             return (
                 <>
@@ -71,6 +76,25 @@ export default class Roteador extends Component<{}, state> {
 
                 </>
             )
+        }
+        if (this.state.tela === 'Adicionar Produto ou Serviço') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <AdicionarProduto tema="purple lighten-4"/>
+                    <AdicionarServico tema="purple lighten-4"/>
+                </>
+            )
+        }
+
+        if (this.state.tela === 'Listagens Especificas') {
+            return(
+                <>
+                    {barraNavegacao}
+                    <ListaPorGenero  tema="purple lighten-4"/>
+                </>
+            )
+            
         }
 
     }

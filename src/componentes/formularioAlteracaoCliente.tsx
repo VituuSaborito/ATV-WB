@@ -11,7 +11,7 @@ export default class FormularioAlteracaoCliente extends Component<props> {
         return (
             <div className="row">
                 
-                <h3>Alterar</h3>
+                <h3>Alteração</h3>
                 <form className="col s12">
                     <div className="row">
                         <div className="input-field col s6">
