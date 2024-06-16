@@ -6,7 +6,7 @@ import FormularioAlterarCliente from "./formularioAlterarCliente";
 import FormularioDeletaCliente from "./formularioDeletaCliente";
 
 export default function Roteador() {
-    const [tela, setTela] = useState('Clientes','Produtos','Serviços')
+    const [tela, setTela] = useState('Clientes','Produtos','Serviços','Listagens Especificas')
 
     const seletorView = (valor, e) => {
         e.preventDefault()
@@ -45,6 +45,18 @@ export default function Roteador() {
                     <ListaClientes tema="purple lighten-4" />
                     <FormularioAlterarCliente tema="purple lighten-4"/>
                     <FormularioDeletaCliente tema="purple lighten-4"/>
+                </>
+            )
+        } 
+         if (tela === 'Listagens Especificas') {
+            return (
+                <>
+                    <ListaPorGenero  tema="purple lighten-4"/>
+                    <Lista5MenosConsumiram tema="purple lighten-4"/>
+                    <ListaConsumidosPorGenero tema="purple lighten-4"/>
+                    <ListaMaisConsumiramQuant tema="purple lighten-4"/>
+                    <ListaTop10Compras tema="purple lighten-4"/>
+                    <ListaTop10Menos tema="purple lighten-4"/>
                 </>
             )
         } 
