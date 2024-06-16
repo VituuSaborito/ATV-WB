@@ -15,6 +15,11 @@ import ListaServico from "./listaServico";
 import AdicionarProduto from "./adicionarProduto";
 import AdicionarServico from "./adicionarServico";
 import ListaPorGenero from "./listaPorGenero";
+import Lista5MenosConsumiram from "./listaDos5maiscompraramValor";
+import ListaConsumidosPorGenero from "./listaConsumidosGenero";
+import ListaMaisConsumiramQuant from "./listaMaisConsumidos";
+import ListaTop10Compras from "./listaTop10Compras";
+import ListaTop10Menos from "./listaTop10MenosConsumiram";
 
 
 
@@ -92,6 +97,16 @@ export default class Roteador extends Component<{}, state> {
                 <>
                     {barraNavegacao}
                     <ListaPorGenero  tema="purple lighten-4"/>
+                    {/* <hr /> */}
+                    <Lista5MenosConsumiram tema="purple lighten-4"/>
+                    {/* <hr /> */}
+                    <ListaConsumidosPorGenero tema="purple lighten-4"/>
+                    {/* <hr /> */}
+                    <ListaMaisConsumiramQuant tema="purple lighten-4"/>
+                    {/* <hr /> */}
+                    <ListaTop10Compras tema="purple lighten-4"/>
+                    {/* <hr /> */}
+                    <ListaTop10Menos tema="purple lighten-4"/>
                 </>
             )
             
