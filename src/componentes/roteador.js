@@ -6,7 +6,7 @@ import FormularioAlterarCliente from "./formularioAlterarCliente";
 import FormularioDeletaCliente from "./formularioDeletaCliente";
 
 export default function Roteador() {
-    const [tela, setTela] = useState('Clientes')
+    const [tela, setTela] = useState('Clientes','Produtos','Serviços')
 
     const seletorView = (valor, e) => {
         e.preventDefault()
