@@ -97,15 +97,10 @@ export default class Roteador extends Component<{}, state> {
                 <>
                     {barraNavegacao}
                     <ListaPorGenero  tema="purple lighten-4"/>
-                    {/* <hr /> */}
                     <Lista5MenosConsumiram tema="purple lighten-4"/>
-                    {/* <hr /> */}
                     <ListaConsumidosPorGenero tema="purple lighten-4"/>
-                    {/* <hr /> */}
                     <ListaMaisConsumiramQuant tema="purple lighten-4"/>
-                    {/* <hr /> */}
                     <ListaTop10Compras tema="purple lighten-4"/>
-                    {/* <hr /> */}
                     <ListaTop10Menos tema="purple lighten-4"/>
                 </>
             )
