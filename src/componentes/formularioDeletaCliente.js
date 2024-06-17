@@ -1,7 +1,9 @@
+import React from 'react';
 export default function FormularioDeletaCliente(props){
     const estiloBotao = `btn waves-effect waves-light ${props.tema}`
     return (
         <div className="row">
+        <h1>Deletar Cliente</h1>
             <form className="col s12">
                     <div className="row">
                         <div className="input-field col s6">

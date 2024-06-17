@@ -2,6 +2,7 @@ export default function FormularioAlterarServico(props){
     const estiloBotao = `btn waves-effect waves-light ${props.tema}`
     return (
         <div className="row">
+            <h1>Alterar Serviço</h1>
             <form className="col s12">
                 <div className="row">
                     <div className="input-field col s6">

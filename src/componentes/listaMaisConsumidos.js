@@ -1,5 +1,6 @@
+import React from 'react';
 export default function ListaMaisConsumiramQuant (props) {
-        let estilo = `collection-item active ${this.props.tema}`
+        // let estilo = `collection-item active ${this.props.tema}`
         return (
             <>
             <h3>Lista dos produtos e dos serviços mais consumidos</h3>

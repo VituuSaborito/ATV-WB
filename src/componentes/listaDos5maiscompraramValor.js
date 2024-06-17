@@ -1,5 +1,6 @@
+import React from 'react';
 export default function Lista5MenosConsumiram (props) {
-        let estilo = `collection-item active ${this.props.tema}`
+        // let estilo = `collection-item active ${this.props.tema}`
         return (
             <>
             <h3>Lista dos consumidores que mais gastaram</h3>

@@ -1,5 +1,6 @@
+import React from 'react';
 export default function ListaTop10Compras (props) {
-        let estilo = `collection-item active ${this.props.tema}`
+        // let estilo = `collection-item active ${this.props.tema}`
         return (
             <>
             <h3>Lista dos clientes que mais consumiram produtos ou serviços</h3>

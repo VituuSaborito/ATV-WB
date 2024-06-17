@@ -1,5 +1,6 @@
+import React from 'react';
 export default function ListaConsumidosPorGenero(props) {
-        let estilo = `collection-item active ${this.props.tema}`
+        // let estilo = `collection-item active ${this.props.tema}`
         return (
             <>
             <h3>Lista de produtos mais consumidos por genero</h3>

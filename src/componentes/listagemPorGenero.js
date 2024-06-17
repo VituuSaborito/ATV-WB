@@ -1,5 +1,6 @@
+import React from 'react';
 export default function ListaPorGenero(props) {
-         estilo = `collection-item active ${this.props.tema}`
+        //  estilo = `collection-item active ${this.props.tema}`
         return (
             <>
             <h3>Lista por genero</h3>
